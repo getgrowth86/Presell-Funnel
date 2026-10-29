@@ -3,7 +3,7 @@ import { useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 // ← Deinen Calendly-Link hier eintragen (z.B. "https://calendly.com/manuel-lutter/strategie")
-const CALENDLY_URL = "https://calendly.com/DEIN-LINK/strategiegesprach";
+const CALENDLY_URL = "https://calendly.com/manuel_lutter/get-growth-call";
 
 function CalendlyWidget() {
   const params = useSearchParams();
