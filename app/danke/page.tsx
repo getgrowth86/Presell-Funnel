@@ -16,7 +16,7 @@ export default function DankePage() {
           WÄHL DIR EINEN TERMIN.
         </h1>
         <p className="text-[#888] text-lg mb-10">
-          [KURZE BRÜCKE – was sie im Gespräch erwartet, was du vorbereiten wirst]
+          Im Gespräch schauen wir gemeinsam, wo bei dir heute Umsatz verloren geht – und welche Hebel du in welcher Reihenfolge ziehen solltest. Am Ende hast du eine sortierte Liste. Kein Pitch, keine Agenda außer deiner.
         </p>
 
         {/* Calendly Placeholder */}

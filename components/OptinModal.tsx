@@ -37,10 +37,10 @@ export default function OptinModal({ onClose }: { onClose: () => void }) {
         </div>
 
         <h2 className="text-2xl font-black uppercase text-white mb-2">
-          Noch 3 Felder.<br />Dann startet dein [FREEBIE/VIDEO].
+          Noch 3 Felder.<br />Dann startet dein Video.
         </h2>
         <p className="text-[#888] text-sm mb-6">
-          [KURZE ERKLÄRUNG WAS SIE ALS NÄCHSTES ERWARTET]
+          Du siehst sofort das vollständige VSL – plus wie du in 30 Minuten die Hebel bekommst, die dich zum nächsten Level bringen.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -89,7 +89,7 @@ export default function OptinModal({ onClose }: { onClose: () => void }) {
             disabled={loading}
             className="inline-flex items-center gap-2 bg-[#c8f135] text-black font-bold uppercase tracking-wide px-8 py-4 text-lg hover:bg-[#a8cc1a] transition-colors w-full justify-center disabled:opacity-50"
           >
-            {loading ? "Wird geladen …" : "[CTA TEXT] →"}
+            {loading ? "Wird geladen …" : "VIDEO JETZT ANSEHEN →"}
           </button>
           <p className="text-[#555] text-xs text-center">
             Mit der Anmeldung bekommst du gelegentlich Mails von Manuel Lutter.

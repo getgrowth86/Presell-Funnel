@@ -17,18 +17,18 @@ export default function PresellPage() {
       {/* Hero */}
       <section className="max-w-3xl mx-auto px-4 pt-12 pb-8 text-center">
         <div className="mb-6">
-          <span className="inline-flex items-center bg-[#c8f135] text-black text-xs font-bold uppercase tracking-widest px-3 py-1">NEU</span>
+          <span className="inline-flex items-center bg-[#c8f135] text-black text-xs font-bold uppercase tracking-widest px-3 py-1">FÜR COACHES & PERSONENMARKEN</span>
           <span className="ml-3 text-[#888] text-sm uppercase tracking-widest">
-            [DEIN BADGE-TEXT]
+            Ab 100.000 € Monatsumsatz
           </span>
         </div>
 
         <h1 className="text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight text-white mb-6">
-          „[DEINE HAUPT-HEADLINE, DIE DAS GRÖSSTE VERSPRECHEN MACHT]"
+          „Du bist der Engpass in deinem eigenen Business."
         </h1>
 
         <p className="text-[#aaa] text-lg mb-10">
-          [DEINE SUB-HEADLINE – konkrete Zahl, konkretes Ergebnis]
+          Ich zeige dir, woran das liegt, was dagegen hilft – und ob wir zusammenpassen. 30 Minuten. Kostenlos. Auf Augenhöhe.
         </p>
 
         {/* Video Placeholder */}
@@ -49,10 +49,10 @@ export default function PresellPage() {
           onClick={() => setOpen(true)}
           className="inline-flex items-center gap-2 bg-[#c8f135] text-black font-bold uppercase tracking-wide px-12 py-5 text-xl hover:bg-[#a8cc1a] transition-colors w-full md:w-auto justify-center"
         >
-          [DEIN CTA-TEXT] →
+          VIDEO ANSEHEN & TERMIN SICHERN →
         </button>
         <p className="text-[#555] text-xs mt-3">
-          Video startet sofort · [X Minuten] · [Dein Bonus-Versprechen]
+          Video startet sofort · ~12 Minuten · Kostenlos
         </p>
       </section>
 
@@ -60,16 +60,16 @@ export default function PresellPage() {
       <section className="border-t border-b border-[#1a1a1a] py-8 my-8">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <p className="text-4xl font-black text-[#c8f135]">[ZAHL]</p>
-            <p className="text-[#888] text-sm uppercase tracking-wide mt-1">[WAS DIESE ZAHL BEDEUTET]</p>
+            <p className="text-4xl font-black text-[#c8f135]">150M+ €</p>
+            <p className="text-[#888] text-sm uppercase tracking-wide mt-1">Umsatz begleitet</p>
           </div>
           <div>
-            <p className="text-4xl font-black text-[#c8f135]">[AWARD/AUSZEICHNUNG]</p>
-            <p className="text-[#888] text-sm uppercase tracking-wide mt-1">[SEIT WANN / WER VERGAB ES]</p>
+            <p className="text-4xl font-black text-[#c8f135]">52M+ €</p>
+            <p className="text-[#888] text-sm uppercase tracking-wide mt-1">Meta-Werbebudget verwaltet</p>
           </div>
           <div>
-            <p className="text-4xl font-black text-[#c8f135]">[ZAHL]</p>
-            <p className="text-[#888] text-sm uppercase tracking-wide mt-1">[WAS DIESE ZAHL BEDEUTET]</p>
+            <p className="text-4xl font-black text-[#c8f135]">25+</p>
+            <p className="text-[#888] text-sm uppercase tracking-wide mt-1">Webinar-Funnel aufgebaut</p>
           </div>
         </div>
       </section>
@@ -77,9 +77,9 @@ export default function PresellPage() {
       {/* Testimonial */}
       <section className="max-w-2xl mx-auto px-4 py-8 text-center">
         <blockquote className="text-xl text-white italic mb-4">
-          „[DEIN STÄRKSTES TESTIMONIAL – ein Satz, der trifft]"
+          „Von 1,2 auf 5 Millionen Euro Auftragseingang – in 12 Monaten."
         </blockquote>
-        <p className="text-[#888] text-sm">[Name, Titel/Firma]</p>
+        <p className="text-[#888] text-sm">Unternehmerin, Coaching-Business</p>
       </section>
 
       {/* Second CTA */}
@@ -88,10 +88,10 @@ export default function PresellPage() {
           onClick={() => setOpen(true)}
           className="inline-flex items-center gap-2 bg-[#c8f135] text-black font-bold uppercase tracking-wide px-12 py-5 text-xl hover:bg-[#a8cc1a] transition-colors"
         >
-          [DEIN CTA-TEXT] →
+          VIDEO ANSEHEN & TERMIN SICHERN →
         </button>
         <p className="text-[#555] text-xs mt-3">
-          [Deine Vertrauens-Zeile: z.B. Kostenlos · Kein Spam · Sofortiger Zugang]
+          Kostenlos · 30 Minuten · Nur für Coaches & Personenmarken ab 100k€/Monat
         </p>
       </section>
 

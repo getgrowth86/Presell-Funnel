@@ -2,31 +2,31 @@
 import Link from "next/link";
 
 const chapters = [
-  { time: "0:00", title: "[KAPITEL 1 – z.B. Das Problem]" },
-  { time: "2:00", title: "[KAPITEL 2 – z.B. Wer bin ich?]" },
-  { time: "5:00", title: "[KAPITEL 3 – z.B. Die Methode]" },
-  { time: "8:00", title: "[KAPITEL 4 – z.B. Schritt 1]" },
-  { time: "11:00", title: "[KAPITEL 5 – z.B. Schritt 2]" },
-  { time: "14:00", title: "[KAPITEL 6 – z.B. Die Ergebnisse]" },
-  { time: "17:00", title: "[KAPITEL 7 – z.B. Die zwei Wege]" },
-  { time: "19:00", title: "[KAPITEL 8 – z.B. Für wen das ist]" },
+  { time: "0:00", title: "Du bist der Engpass" },
+  { time: "0:35", title: "Wer ist Manuel?" },
+  { time: "0:58", title: "Das echte Problem" },
+  { time: "1:40", title: "Dein typischer Dienstag" },
+  { time: "2:15", title: "Warum Ads nicht reichen" },
+  { time: "2:50", title: "Die 4 Schritte" },
+  { time: "5:10", title: "Case Study: 1,2 → 5 Mio." },
+  { time: "9:10", title: "Ist das was für dich?" },
 ];
 
 const proof = [
   {
-    label: "KUNDE · [BRANCHE]",
-    stat: "[ERGEBNIS IN ZAHLEN]",
-    desc: "[Name, Kontext]: [1-Satz-Ergebnis]. [Quelle / Beleg].",
+    label: "UNTERNEHMERIN · COACHING",
+    stat: "5 Mio. €",
+    desc: "Von 1,2 auf 5 Millionen Euro Auftragseingang in 12 Monaten – durch Webinar-Funnel und skalierbare Prozesse.",
   },
   {
-    label: "KUNDE · [BRANCHE]",
-    stat: "[ERGEBNIS IN ZAHLEN]",
-    desc: "[Name, Kontext]: [1-Satz-Ergebnis]. [Quelle / Beleg].",
+    label: "SECRET CREATORS CLUB · COMMUNITY",
+    stat: "1,1 Mio. €",
+    desc: "Monatsumsatz im Juli 2024 – bei 40 Grad Außentemperatur. System läuft, auch wenn du nicht da bist.",
   },
   {
-    label: "KUNDE · [BRANCHE]",
-    stat: "[ERGEBNIS IN ZAHLEN]",
-    desc: "[Name, Kontext]: [1-Satz-Ergebnis]. [Quelle / Beleg].",
+    label: "HOSS & HOPF, BASTIAN BARAMI U. A.",
+    stat: "150M+ €",
+    desc: "Umsatz, den ich als Stratege, CMO und Media Buyer über mehrere Marken mit siebenstelligem Monatsumsatz begleitet habe.",
   },
 ];
 
@@ -41,11 +41,11 @@ export default function VideoPage() {
 
       <section className="max-w-3xl mx-auto px-4 pt-10 pb-6 text-center">
         <p className="text-[#c8f135] text-sm uppercase tracking-widest mb-4">
-          [VORNAME], dein [Video/Freebie] ist freigeschaltet.
+          Dein Video ist freigeschaltet.
         </p>
         <h1 className="text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight text-white mb-8">
-          WENN DU DAS HEUTE SCHAUST,<br />
-          KANNST DU[<span className="text-[#c8f135]">VERSPRECHEN IN ZEITRAUM</span>].
+          SCHAU DAS JETZT.<br />
+          <span className="text-[#c8f135]">DANACH WEISST DU, WO DEIN UMSATZ VERLOREN GEHT.</span>
         </h1>
 
         {/* Video */}
@@ -72,13 +72,13 @@ export default function VideoPage() {
         {/* Primary CTA */}
         <div className="bg-[#111] border border-[#222] p-8 mb-12">
           <h2 className="text-2xl font-black uppercase text-white mb-2">
-            [DEIN CTA-HEADING]
+            WELCHE HEBEL HOLEN BEI DIR DEN NÄCHSTEN SCHRITT?
           </h2>
-          <p className="text-[#888] mb-6">[30 Minuten · vorher X kurze Fragen · was sie erwarten]</p>
+          <p className="text-[#888] mb-6">30 Minuten · 5 kurze Fragen zur Vorqualifikation · kein Verkaufsgespräch mit Druck</p>
           <Link href="/bewerbung" className="inline-flex items-center gap-2 bg-[#c8f135] text-black font-bold uppercase tracking-wide px-10 py-4 text-lg hover:bg-[#a8cc1a] transition-colors">
-            [CTA-TEXT] →
+            JETZT BEWERBUNG STARTEN →
           </Link>
-          <p className="text-[#555] text-xs mt-3">[Vertrauens-Zeile]</p>
+          <p className="text-[#555] text-xs mt-3">Nur für Coaches & Personenmarken ab 100.000 € Monatsumsatz</p>
         </div>
       </section>
 
@@ -89,7 +89,7 @@ export default function VideoPage() {
           ALSO GUCK SELBST.
         </h2>
         <p className="text-[#888] text-center text-sm mb-8">
-          [DEINE BELEG-EINLEITUNG – was du hier zeigst und warum es glaubwürdig ist]
+          Keine Screenshots von Dashboards, die jeder faken kann. Nur Zahlen, die ich dir im Gespräch belegen kann.
         </p>
 
         <div className="grid md:grid-cols-3 gap-4 mb-12">
@@ -109,7 +109,7 @@ export default function VideoPage() {
           <div className="bg-[#111] border border-[#1a2a00] p-6">
             <h3 className="font-black uppercase text-[#c8f135] mb-4">DAS IST FÜR DICH, WENN</h3>
             <ul className="space-y-2 text-sm text-[#aaa]">
-              {["[Kriterium 1]", "[Kriterium 2]", "[Kriterium 3]", "[Kriterium 4]", "[Kriterium 5]"].map((k, i) => (
+              {["Du machst monatlich 100.000 € oder mehr Umsatz.", "Du hast ein erprobtes Angebot, das sich verkauft.", "Du willst skalieren und weißt, dass dein Setup das nicht trägt.", "Du bist bereit, Verantwortung abzugeben und Prozesse zu verändern.", "Du triffst Entscheidungen schnell und stehst dir nicht selbst im Weg."].map((k, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-[#c8f135] mt-0.5">✓</span> {k}
                 </li>
@@ -119,7 +119,7 @@ export default function VideoPage() {
           <div className="bg-[#111] border border-[#2a1a1a] p-6">
             <h3 className="font-black uppercase text-[#888] mb-4">NICHTS FÜR DICH, WENN</h3>
             <ul className="space-y-2 text-sm text-[#888]">
-              {["[Ausschluss 1]", "[Ausschluss 2]", "[Ausschluss 3]", "[Ausschluss 4]", "[Ausschluss 5]"].map((k, i) => (
+              {["Du machst unter 100.000 € im Monat.", "Du hast noch kein bewährtes Angebot.", "Du erwartest, dass jemand anderes dein Business baut.", "Du willst Garantien, ohne selbst dabei zu sein.", "Du suchst eine Agentur, die dir Reports schickt."].map((k, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-[#555] mt-0.5">✕</span> {k}
                 </li>
@@ -134,9 +134,9 @@ export default function VideoPage() {
             KEINE FAQ. DIE DREI FRAGEN, DIE WIRKLICH KOMMEN.
           </h2>
           {[
-            { q: "[HÄUFIGSTER EINWAND 1]", a: "[Deine Antwort – direkt, ehrlich, ohne Weichspüler]" },
-            { q: "[HÄUFIGSTER EINWAND 2 – meist Preis]", a: "[Deine Antwort]" },
-            { q: "[HÄUFIGSTER EINWAND 3 – meist 'kann ich das selbst?']", a: "[Deine Antwort]" },
+            { q: "Ich hatte schon eine Agentur. Warum sollte das hier anders sein?", a: "Weil ich keine Agentur bin. Ich baue das System mit dir, nicht für dich. Du verstehst jeden Schritt. Kein ausgelagertes Team, das Reports schickt – sondern eine Strategie, die dein Team umsetzt und die dir gehört." },
+            { q: "Was kostet das?", a: "Das besprechen wir erst, wenn klar ist, welche Hebel zu dir passen. Ich will dir keine Zahl hinwerfen, die nicht zu deinem Fall passt. Im Erstgespräch schauen wir zuerst, ob es überhaupt Sinn macht." },
+            { q: "Brauche ich dafür ein großes Team?", a: "Nein. Die meisten starten mit dem Team, das sie bereits haben. Das Team wächst mit dem System – nicht davor. Der erste Schritt ist immer der Engpass, nicht die Teamgröße." },
           ].map((f, i) => (
             <div key={i} className="border-b border-[#1a1a1a] py-5">
               <h4 className="font-black uppercase text-white mb-2">{f.q}</h4>
@@ -151,9 +151,9 @@ export default function VideoPage() {
             DU HAST BIS HIER GELESEN. DANN GEHÖRST DU WAHRSCHEINLICH IN DIE ERSTE GRUPPE.
           </p>
           <Link href="/bewerbung" className="inline-flex items-center gap-2 bg-[#c8f135] text-black font-bold uppercase tracking-wide px-10 py-4 text-lg hover:bg-[#a8cc1a] transition-colors">
-            [CTA-TEXT] →
+            JETZT BEWERBUNG STARTEN →
           </Link>
-          <p className="text-[#555] text-xs mt-3">[Vertrauens-Zeile]</p>
+          <p className="text-[#555] text-xs mt-3">Nur für Coaches & Personenmarken ab 100.000 € Monatsumsatz</p>
         </div>
       </section>
 

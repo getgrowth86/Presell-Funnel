@@ -93,10 +93,10 @@ export default function BewerbungPage() {
               Letzter Schritt vor dem Kalender
             </p>
             <h1 className="text-2xl font-black uppercase text-white mb-2">
-              [X] FRAGEN. WENN ES PASST,<br />SIEHST DU DIREKT MEINEN KALENDER.
+              5 FRAGEN. WENN ES PASST,<br />SIEHST DU DIREKT MEINEN KALENDER.
             </h1>
             <p className="text-[#888] text-sm">
-              [Erkläre kurz warum du vorqualifizierst – z.B. "Wir nehmen nur X Kunden gleichzeitig"]
+              Ich nehme nicht jeden. Wenn die Voraussetzungen stimmen, sprechen wir 30 Minuten auf Augenhöhe.
             </p>
           </div>
 
