@@ -1,48 +1,90 @@
-// Danke-Seite / Kalender-Seite
+"use client";
+import { useEffect, useRef, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+
+// ← Deinen Calendly-Link hier eintragen (z.B. "https://calendly.com/manuel-lutter/strategie")
+const CALENDLY_URL = "https://calendly.com/DEIN-LINK/strategiegesprach";
+
+function CalendlyWidget() {
+  const params = useSearchParams();
+  const name = params.get("name") || "";
+  const email = params.get("email") || "";
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const existing = document.getElementById("calendly-widget-script");
+    const init = () => {
+      const cal = (window as unknown as { Calendly?: { initInlineWidget: (opts: unknown) => void } }).Calendly;
+      if (!cal || !ref.current) return;
+      ref.current.innerHTML = "";
+      cal.initInlineWidget({
+        url: CALENDLY_URL,
+        parentElement: ref.current,
+        prefill: { name, email },
+        utm: {},
+      });
+    };
+    if (existing) {
+      init();
+    } else {
+      const script = document.createElement("script");
+      script.id = "calendly-widget-script";
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      script.onload = init;
+      document.head.appendChild(script);
+    }
+  }, [name, email]);
+
+  return (
+    <div
+      ref={ref}
+      className="w-full rounded-none"
+      style={{ minHeight: "700px" }}
+    />
+  );
+}
+
 export default function DankePage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center px-4">
-      <nav className="w-full flex justify-center py-4 border-b border-[#1a1a1a] absolute top-0">
+    <main className="min-h-screen bg-[#0a0a0a] flex flex-col">
+      <nav className="w-full flex justify-center py-4 border-b border-[#1a1a1a]">
         <span className="text-white font-black uppercase tracking-widest text-sm">
           MANUEL LUTTER
         </span>
       </nav>
 
-      <div className="text-center max-w-2xl">
-        <div className="mb-8">
-          <span className="inline-flex items-center bg-[#c8f135] text-black text-xs font-bold uppercase tracking-widest px-3 py-1">FAST DA</span>
-        </div>
-        <h1 className="text-4xl md:text-6xl font-black uppercase text-white mb-4">
-          WÄHL DIR EINEN TERMIN.
-        </h1>
-        <p className="text-[#888] text-lg mb-10">
-          Im Gespräch schauen wir gemeinsam, wo bei dir heute Umsatz verloren geht – und welche Hebel du in welcher Reihenfolge ziehen solltest. Am Ende hast du eine sortierte Liste. Kein Pitch, keine Agenda außer deiner.
-        </p>
-
-        {/* Calendly Placeholder */}
-        <div className="bg-[#111] border border-[#222] rounded-none p-12 mb-8">
-          <p className="text-[#555] text-sm mb-2">CALENDLY / TERMINBUCHUNG HIER</p>
-          <p className="text-[#333] text-xs">
-            Ersetze diesen Block mit deinem eingebetteten Calendly-Widget
+      <div className="flex-1 px-4 py-10 max-w-3xl mx-auto w-full">
+        <div className="text-center mb-8">
+          <span className="inline-flex items-center bg-[#c8f135] text-black text-xs font-bold uppercase tracking-widest px-3 py-1 mb-4">
+            FAST DA
+          </span>
+          <h1 className="text-3xl md:text-5xl font-black uppercase text-white mb-4">
+            WÄHL DIR EINEN TERMIN.
+          </h1>
+          <p className="text-[#888] text-lg max-w-xl mx-auto">
+            Im Gespräch schauen wir gemeinsam, wo bei dir heute Umsatz verloren geht – und welche Hebel du in welcher Reihenfolge ziehen solltest. Kein Pitch. Keine Agenda außer deiner.
           </p>
-          <div className="mt-6">
-            <a
-              href="https://calendly.com/DEIN-LINK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#c8f135] text-black font-bold uppercase tracking-wide px-8 py-4 text-lg hover:bg-[#a8cc1a] transition-colors"
-            >
-              TERMIN BUCHEN →
-            </a>
-          </div>
         </div>
 
-        <p className="text-[#555] text-xs">
-          Du wirst in wenigen Minuten eine Bestätigungs-Mail erhalten.
+        {/* Calendly Inline Widget */}
+        <div className="bg-[#111] border border-[#222]">
+          <Suspense fallback={
+            <div className="flex items-center justify-center" style={{ minHeight: "700px" }}>
+              <p className="text-[#555] text-sm">Kalender wird geladen …</p>
+            </div>
+          }>
+            <CalendlyWidget />
+          </Suspense>
+        </div>
+
+        <p className="text-[#555] text-xs text-center mt-6">
+          Du erhältst sofort eine Bestätigungs-Mail. Bei Fragen: Antworte direkt darauf.
         </p>
       </div>
 
-      <footer className="w-full border-t border-[#1a1a1a] py-6 text-center absolute bottom-0">
+      <footer className="w-full border-t border-[#1a1a1a] py-6 text-center">
         <div className="flex justify-center gap-8 text-[#555] text-xs">
           <a href="/impressum" className="hover:text-white">Impressum</a>
           <a href="/datenschutz" className="hover:text-white">Datenschutz</a>

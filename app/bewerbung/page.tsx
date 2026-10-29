@@ -67,7 +67,12 @@ export default function BewerbungPage() {
     setLoading(true);
     // TODO: Daten an CRM/Webhook senden
     await new Promise((r) => setTimeout(r, 600));
-    router.push("/danke");
+    const params = new URLSearchParams({
+      name: contact.vorname,
+      email: contact.email,
+      tel: contact.telefon,
+    });
+    router.push(`/danke?${params.toString()}`);
   }
 
   const canProceed =
